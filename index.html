@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Frontend Mentor | E-commerce Product Page</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  >
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <div class="logo-nav">
+
+      <img
+        src="./images/logo.svg"
+        alt="Sneakers logo"
+      >
+
+      <nav>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="header-actions">
+
+      <button class="cart-btn">
+
+        <img
+          src="./images/icon-cart.svg"
+          alt="Cart"
+        >
+
+        <span class="cart-badge">
+          0
+        </span>
+
+      </button>
+
+      <img
+        class="avatar"
+        src="./images/image-avatar.png"
+        alt="User avatar"
+      >
+
+    </div>
+
+  </header>
+
+  <!-- CART DROPDOWN -->
+
+  <div class="cart-dropdown">
+
+    <div class="cart-header">
+      <h3>Cart</h3>
+    </div>
+
+    <div class="cart-content">
+
+      <p class="empty-cart">
+        Your cart is empty.
+      </p>
+
+      <div class="cart-filled hidden">
+
+        <div class="cart-item">
+
+          <img
+            class="cart-item-image"
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="Product"
+          >
+
+          <div class="cart-item-info">
+
+            <p>
+              Fall Limited Edition Sneakers
+            </p>
+
+            <p>
+              $125.00 x
+              <span class="cart-quantity">0</span>
+              <strong class="cart-total">$0.00</strong>
+            </p>
+
+          </div>
+
+          <button class="delete-btn">
+
+            <img
+              src="./images/icon-delete.svg"
+              alt="Delete item"
+            >
+
+          </button>
+
+        </div>
+
+        <button class="checkout-btn">
+          Checkout
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <main>
+
+    <!-- GALLERY -->
+
+    <section class="product-gallery">
+
+      <img
+        id="main-image"
+        class="main-image"
+        src="./images/image-product-1.jpg"
+        alt="Sneaker"
+      >
+
+      <div class="thumbnails">
+
+        <img
+          class="thumbnail active"
+          src="./images/image-product-1-thumbnail.jpg"
+          data-full="./images/image-product-1.jpg"
+          alt="Sneaker thumbnail 1"
+        >
+
+        <img
+          class="thumbnail"
+          src="./images/image-product-2-thumbnail.jpg"
+          data-full="./images/image-product-2.jpg"
+          alt="Sneaker thumbnail 2"
+        >
+
+        <img
+          class="thumbnail"
+          src="./images/image-product-3-thumbnail.jpg"
+          data-full="./images/image-product-3.jpg"
+          alt="Sneaker thumbnail 3"
+        >
+
+        <img
+          class="thumbnail"
+          src="./images/image-product-4-thumbnail.jpg"
+          data-full="./images/image-product-4.jpg"
+          alt="Sneaker thumbnail 4"
+        >
+
+      </div>
+
+    </section>
+
+    <!-- PRODUCT INFO -->
+
+    <section class="product-info">
+
+      <span class="company">
+        Sneaker Company
+      </span>
+
+      <h1>
+        Fall Limited Edition Sneakers
+      </h1>
+
+      <p>
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they'll withstand everything
+        the weather can offer.
+      </p>
+
+      <div class="pricing">
+
+        <div class="current-price">
+          <span>$125.00</span>
+          <span class="discount">50%</span>
+        </div>
+
+        <span class="old-price">
+          $250.00
+        </span>
+
+      </div>
+
+      <div class="product-actions">
+
+        <div class="quantity-selector">
+
+          <button
+            class="minus-btn"
+            aria-label="Decrease quantity"
+          >
+            -
+          </button>
+
+          <span class="quantity">
+            0
+          </span>
+
+          <button
+            class="plus-btn"
+            aria-label="Increase quantity"
+          >
+            +
+          </button>
+
+        </div>
+
+        <button class="add-to-cart">
+          Add to cart
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+ 
+<div class="lightbox hidden">
+
+  <button class="close-lightbox">
+    ✕
+  </button>
+<button class="prev-btn">
+  &#10094;
+</button>
+  <img
+    class="lightbox-image"
+    src="./images/image-product-1.jpg"
+    alt=""
+  >
+  <button class="next-btn">
+  &#10095;
+</button>
+
+  <div class="lightbox-thumbnails">
+
+    <img
+      class="lightbox-thumb active"
+      src="./images/image-product-1-thumbnail.jpg"
+      data-full="./images/image-product-1.jpg"
+    >
+
+    <img
+      class="lightbox-thumb"
+      src="./images/image-product-2-thumbnail.jpg"
+      data-full="./images/image-product-2.jpg"
+    >
+
+    <img
+      class="lightbox-thumb"
+      src="./images/image-product-3-thumbnail.jpg"
+      data-full="./images/image-product-3.jpg"
+    >
+
+    <img
+      class="lightbox-thumb"
+      src="./images/image-product-4-thumbnail.jpg"
+      data-full="./images/image-product-4.jpg"
+    >
+
+  </div>
+ <script src="./script.js"></script>
+</div>
+</body>
+</html>
