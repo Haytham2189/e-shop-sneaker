@@ -453,3 +453,157 @@ nav a:hover {
 .next-btn:hover {
   color: var(--orange);
 }
+@media (max-width: 768px) {
+
+  main {
+    flex-direction: column;
+    gap: 2rem;
+
+    margin: 0;
+    padding: 0 1.5rem 3rem;
+  }
+
+  .product-gallery,
+  .product-info {
+    width: 100%;
+    max-width: none;
+  }
+
+  .main-image {
+    width: 100%;
+  }
+.header {
+  padding: 1.5rem;
+}
+
+.logo-nav {
+  gap: 1rem;
+}
+
+nav {
+  display: none;
+}
+
+.avatar {
+  width: 32px;
+}
+.thumbnails {
+  display: none;
+}
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-actions {
+  flex-direction: column;
+}
+  .menu-btn {
+    display: block;
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    z-index: 1000;
+  }
+
+  .mobile-menu {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: white;
+
+    padding: 2rem;
+
+    z-index: 1001;
+  }
+
+  .mobile-menu nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+
+    margin-top: 3rem;
+  }
+
+  .mobile-menu nav a {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+  }
+
+  .close-menu {
+    margin-bottom: 2rem;
+  }
+
+  .mobile-menu.hidden,
+  .mobile-menu-overlay.hidden {
+    display: none;
+  }
+.mobile-gallery-controls {
+  display: block;
+}
+
+.product-gallery {
+  position: relative;
+}
+
+.mobile-prev,
+.mobile-next {
+  position: absolute;
+  top: 45%;
+
+  width: 40px;
+  height: 40px;
+
+  background: white;
+  border-radius: 50%;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-prev {
+  left: 1rem;
+}
+
+.mobile-next {
+  right: 1rem;
+}
+  .mobile-menu:not(.hidden) {
+    display: block;
+  }
+
+  .mobile-menu-overlay:not(.hidden) {
+    display: block;
+  }
+.quantity-selector {
+  width: 100%;
+}
+
+.add-to-cart {
+  width: 100%;
+}
+}
+.menu-btn {
+  display: none;
+}
+
+.mobile-menu,
+.mobile-menu-overlay {
+  display: none;
+}
+.mobile-gallery-controls {
+  display: none;
+}

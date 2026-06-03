@@ -175,3 +175,105 @@ prevBtn.addEventListener("click", () => {
 
   lightboxImage.src = images[currentImageIndex];
 });
+function updateLightboxActiveThumb() {
+  lightboxThumbs.forEach((thumb) => {
+    thumb.classList.remove("active");
+
+    if (
+      thumb.dataset.full === images[currentImageIndex]
+    ) {
+      thumb.classList.add("active");
+    }
+  });
+}
+nextBtn.addEventListener("click", () => {
+  currentImageIndex++;
+
+  if (currentImageIndex >= images.length) {
+    currentImageIndex = 0;
+  }
+
+  lightboxImage.src = images[currentImageIndex];
+  mainImage.src = images[currentImageIndex];
+
+  updateLightboxActiveThumb();
+});
+prevBtn.addEventListener("click", () => {
+  currentImageIndex--;
+
+  if (currentImageIndex < 0) {
+    currentImageIndex = images.length - 1;
+  }
+
+  lightboxImage.src = images[currentImageIndex];
+  mainImage.src = images[currentImageIndex];
+
+  updateLightboxActiveThumb();
+});
+lightboxThumbs.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+
+    currentImageIndex =
+      images.indexOf(thumb.dataset.full);
+
+    lightboxImage.src = images[currentImageIndex];
+    mainImage.src = images[currentImageIndex];
+
+    updateLightboxActiveThumb();
+  });
+});
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn = document.querySelector(".menu-btn");
+const closeMenuBtn = document.querySelector(".close-menu");
+
+const mobileMenu =
+  document.querySelector(".mobile-menu");
+
+const mobileMenuOverlay =
+  document.querySelector(".mobile-menu-overlay");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("hidden");
+  mobileMenuOverlay.classList.remove("hidden");
+});
+
+closeMenuBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+  mobileMenuOverlay.classList.add("hidden");
+});
+
+mobileMenuOverlay.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+  mobileMenuOverlay.classList.add("hidden");
+});
+const mobilePrev =
+  document.querySelector(".mobile-prev");
+
+const mobileNext =
+  document.querySelector(".mobile-next");
+  function updateMainImage() {
+  mainImage.src = images[currentImageIndex];
+}
+mobileNext.addEventListener("click", () => {
+
+  currentImageIndex++;
+
+  if (currentImageIndex >= images.length) {
+    currentImageIndex = 0;
+  }
+
+  updateMainImage();
+});
+mobilePrev.addEventListener("click", () => {
+
+  currentImageIndex--;
+
+  if (currentImageIndex < 0) {
+    currentImageIndex = images.length - 1;
+  }
+
+  updateMainImage();
+});
